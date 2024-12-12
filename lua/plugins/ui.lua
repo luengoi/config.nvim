@@ -9,7 +9,7 @@ return {
     },
     config = function(_, opts)
       require("catppuccin").setup(opts)
-      vim.cmd.colorscheme "catppuccin"
+      vim.cmd.colorscheme("catppuccin")
     end,
   },
 
@@ -138,5 +138,15 @@ return {
       end
       require("noice").setup(opts)
     end,
+  },
+
+  -- nicer notifications
+  {
+    "snacks.nvim",
+    opts = {
+      notifier = {
+        enabled = true,
+      },
+    },
   },
 }
