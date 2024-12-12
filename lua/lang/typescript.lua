@@ -156,7 +156,7 @@ return {
 
   -- tooling
   {
-    "mason.nvim",
+    "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
         "eslint_d",
@@ -167,7 +167,7 @@ return {
 
   -- formatting
   {
-    "conform.nvim",
+    "stevearc/conform.nvim",
     opts = {
       formatters_by_ft = {
         typescript = { "prettierd" },
@@ -180,7 +180,7 @@ return {
 
   -- linting
   {
-    "nvim-lint",
+    "mfussenegger/nvim-lint",
     opts = {
       linters_by_ft = {
         typescript = { "eslint_d" },

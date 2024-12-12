@@ -36,17 +36,17 @@ return {
 
   -- tooling
   {
-    "mason.nvim",
+    "williamboman/mason.nvim",
     opts = { ensure_installed = { "stylua" } },
   },
 
   -- formatting and syntax
   {
-    "conform.nvim",
+    "stevearc/conform.nvim",
     opts = { formatters_by_ft = { lua = { "stylua" } } },
   },
   {
-    "nvim-treesitter",
+    "nvim-treesitter/nvim-treesitter",
     opts = { ensure_installed = { "lua", "luadoc", "luap" } },
   },
   {
