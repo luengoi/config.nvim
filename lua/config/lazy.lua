@@ -27,14 +27,6 @@ require("lazy").setup({
       "folke/snacks.nvim",
       priority = 1000,
       lazy = false,
-      config = function(_, opts)
-        local notify = vim.nofity
-        require("snacks").setup(opts)
-        -- HACK: restore vim.notify after snacks setup and let noice.nvim
-        -- take over. This is needed to have early notifications show up
-        -- in history.
-        vim.notify = notify
-      end,
     },
   },
   install = { colorscheme = { "catppuccin" } },
