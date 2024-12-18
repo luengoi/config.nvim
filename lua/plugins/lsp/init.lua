@@ -47,6 +47,7 @@ return {
         },
         servers = {
           bashls = {},
+          jsonls = {},
           lua_ls = {
             settings = {
               Lua = {

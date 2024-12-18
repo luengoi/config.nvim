@@ -117,6 +117,7 @@ return {
       end,
       formatters_by_ft = {
         bash = { "shfmt" },
+        json = { "prettierd" },
         lua = { "stylua" },
         sh = { "shfmt" },
         -- Additional formatters managed by language support plugins
