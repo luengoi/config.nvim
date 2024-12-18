@@ -46,7 +46,34 @@ return {
           },
         },
         servers = {
-          -- Managed by language support plugins
+          bashls = {},
+          lua_ls = {
+            settings = {
+              Lua = {
+                workspace = {
+                  checkThirdParty = false,
+                },
+                codeLens = {
+                  enable = true,
+                },
+                completion = {
+                  callSnippet = "Replace",
+                },
+                doc = {
+                  privateName = { "^_" },
+                },
+                hint = {
+                  enable = true,
+                  setType = false,
+                  paramType = true,
+                  paramName = "Disable",
+                  semicolon = "Disable",
+                  arrayIndex = "Disable",
+                },
+              },
+            },
+          },
+          -- Additional LSP servers managed by language support plugins
         },
         -- additional lsp server setup
         ---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
@@ -166,7 +193,10 @@ return {
     ---@type MasonSettings | {ensure_installed: string[]}
     opts = {
       ensure_installed = {
-        -- Managed by language support plugins
+        "shellcheck",
+        "shfmt",
+        "stylua",
+        -- Additional LSP servers managed by language support plugins
       },
     },
     ---@param opts MasonSettings | {ensure_installed: string[]}
@@ -192,5 +222,17 @@ return {
         end
       end)
     end,
+  },
+
+  -- improved LSP configuration for Lua
+  {
+    "folke/lazydev.nvim",
+    ft = "lua",
+    dependencies = { "Bilal2453/luvit-meta" },
+    opts = {
+      library = {
+        path = { "luvit-meta/library", words = { "vim%.uv" } },
+      },
+    },
   },
 }

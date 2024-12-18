@@ -116,7 +116,10 @@ return {
         }
       end,
       formatters_by_ft = {
-        -- Managed by language support plugins
+        bash = { "shfmt" },
+        lua = { "stylua" },
+        sh = { "shfmt" },
+        -- Additional formatters managed by language support plugins
       },
     },
   },
@@ -128,7 +131,9 @@ return {
     opts = {
       events = { "BufWritePost", "BufReadPost", "InsertLeave" },
       linters_by_ft = {
-        -- Managed by language support plugins
+        bash = { "shellcheck" },
+        sh = { "shellcheck" },
+        -- Additional linters managed by language support plugins
       },
     },
     config = function(_, opts)
