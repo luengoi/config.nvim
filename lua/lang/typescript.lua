@@ -165,6 +165,17 @@ return {
     },
   },
 
+  -- syntax
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "typescript",
+        "tsx",
+      },
+    },
+  },
+
   -- formatting
   {
     "stevearc/conform.nvim",
