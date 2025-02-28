@@ -191,6 +191,7 @@ return {
     "williamboman/mason.nvim",
     cmd = "Mason",
     build = ":MasonUpdate",
+    opts_extend = { "ensure_installed" },
     ---@type MasonSettings | {ensure_installed: string[]}
     opts = {
       ensure_installed = {
