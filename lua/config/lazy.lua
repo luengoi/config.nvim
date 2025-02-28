@@ -22,7 +22,7 @@ Config.setup()
 require("lazy").setup({
   spec = {
     { import = "plugins" },
-    { import = "lang" },
+    { import = "plugins.lang" },
     {
       "folke/snacks.nvim",
       priority = 1000,
