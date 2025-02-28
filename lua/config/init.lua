@@ -4,9 +4,9 @@ local M = {}
 M.icons = {
   diagnostics = {
     Error = " ",
-    Warn  = " ",
-    Hint  = " ",
-    Info  = " ",
+    Warn = " ",
+    Hint = " ",
+    Info = " ",
   },
 }
 
