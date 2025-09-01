@@ -55,7 +55,7 @@ return {
             vim.api.nvim_create_autocmd("LspDetach", {
               group = vim.api.nvim_create_augroup("mine-lsp-detach", { clear = true }),
               callback = function(ev)
-                vim.lsp.buf.clear_referfences()
+                vim.lsp.buf.clear_references()
                 vim.api.nvim_clear_autocmds { group = "mine-lsp-highlight", buffer = ev.buf }
               end
             })
