@@ -29,6 +29,6 @@ require("lazy").setup({
   ui = {
     border = "rounded",
   },
-  install = { colorscheme = { "catppuccin" } },
+  install = { colorscheme = { "nordic" } },
   checker = { enabled = true },
 })
